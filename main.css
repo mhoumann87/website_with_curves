@@ -8,7 +8,7 @@
 
 .red {
   background: #dd3f31;
-} 
+}
 
 .pink {
   background: #ff0066;
@@ -35,12 +35,12 @@ section {
   padding: 6.25em 20vw;
 }
 
-/* First section with curve */
+/* First section with curve plain css */
 
 .curve {
   position: absolute;
   height: 14.0625em;
-  width: 100%;;
+  width: 100%;
   bottom: 0;
 }
 
@@ -64,4 +64,40 @@ section {
   height: 100%;
   background-color: #3c31dd;
   transform: translate(-1%, 40%);
+}
+
+/* bubble bg plain css */
+
+.bubble::after {
+  content: '';
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  background-color: #0f0f10;
+  height: 85%;
+}
+
+/* Curved background with SVG from https://www.shapedivider.app/ */
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(103% + 1.3px);
+  height: 16.375em;
+}
+
+.wave .shape-fill {
+  fill: hsl(240, 3%, 6%);
 }
