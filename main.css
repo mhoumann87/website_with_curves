@@ -23,6 +23,7 @@ body {
   font-family: 'Prompt', sans-serif;
   background: #171717;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 section {
@@ -32,4 +33,35 @@ section {
   align-items: center;
   min-height: 25em;
   padding: 6.25em 20vw;
+}
+
+/* First section with curve */
+
+.curve {
+  position: absolute;
+  height: 14.0625em;
+  width: 100%;;
+  bottom: 0;
+}
+
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #171717;
+  transform: translate(88%, 60%);
+}
+
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  transform: translate(-1%, 40%);
 }
