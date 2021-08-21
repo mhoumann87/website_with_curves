@@ -28,6 +28,19 @@
   margin-top: -1px;
 }
 
+a {
+  text-decoration: none;
+  color: #34f06c;
+  transition: all 300ms ease-out;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #219945;
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
   font-family: 'Prompt', sans-serif;
@@ -91,6 +104,10 @@ section {
 }
 
 /* Curved background with SVG from https://www.shapedivider.app/ */
+
+.red {
+  z-index: 99;
+}
 
 .wave {
   position: absolute;
